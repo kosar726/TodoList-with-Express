@@ -1,0 +1,47 @@
+<%- include ('./includes/head.ejs')  %> 
+    <div class="form-group">
+        <h1>کارهای روزمره</h1>
+        <form action="/admin/add-todo" role="form" method="POST">
+            <div class="input-group">
+                <input type="text" name="todo" placeholder="کار امروز" />
+                <div class="input-group-prepend">
+                    <button type="submit" class=" fa fa-plus" />
+                </div>
+            </div>
+        </form>
+        <div class="works">
+            <p>کارهای انجام شده : <span class="completed">
+                    <%= completedTodos %>
+                </span></p>
+            <p>کارهای باقی مانده : <span class="not-completed">
+                    <%= NotCompleted %>
+                </span></p>
+        </div>
+    </div>
+    <% if(todos.length> 0) { %>
+        <ul class="list-unstyled todo">
+            <% for(let todo of todos) {%>
+                <li class="<%= (todo.completed ? " success" : "not-success" ) %> ">
+                    <% if (todo.completed){ %>
+                        <del>
+                            <div>
+                                <a href="/admin/deleted/<%= todo.id %> "><i class="fa fa-remove"></i></a>
+                                <%= todo.text %>
+                            </div>
+                        </del>
+                        <% } else {%>
+                            <div>
+                                <a href="/admin/deleted/<%= todo.id %> "><i class="fa fa-remove"></i></a>
+                                <%= todo.text %>
+                                    <a href="/admin/completed/<%= todo.id %> "><i class="fa fa-check"></i></a>
+                            </div>
+                            <% } %>
+                </li>
+                <% } %>
+        </ul>
+        <% } else { %>
+            <div class="anything">
+                <h4>هیچ کاری ثبت نشده :(</h4>
+            </div>
+            <% } %>
+<%- include ("./includes/footer.ejs")  %> 
