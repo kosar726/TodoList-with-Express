@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Azarmehr1';
+    src: url("../fonts/AzarMehr-Light.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Azarmehr2';
+    src: url("../fonts/AzarMehr-Black.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'pinars';
+    src: url("../fonts/pinars.woff2") format("woff2");
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    direction: rtl !important;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+h1 {
+    margin: auto !important;
+    font-family: 'pinars' !important;
+    color: #395f2d;
+    font-size: 1.5rem !important;
+    padding: 15px;
+    border-radius: 70px;
+}
+
+.form-group,
+.todo {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.todo>li {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 20px;
+    margin-left: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    ;
+    width: 30% !important;
+    padding: 10px;
+    border-radius: 50px;
+    font-family: 'Azarmehr1';
+    font-size: 1rem !important;
+}
+
+.success{
+    background-color: #b9ddb6 !important;
+    opacity: 0.8 !important;
+}
+.not-success{
+    background-color: transparent;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    ;
+    opacity: 1 !important;
+}
+.todo>li>div>a {
+    margin: 0px 25px;
+}
+
+input {
+    border: 1px solid #D2AB67;
+    font-family: 'Azarmehr1' !important;
+    border-radius: 50px;
+    padding: 10px 35px;
+    margin-top: 15px !important;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.input-group-prepend>button {
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #D2AB67;
+    margin-right: 12px;
+    background-color: white;
+    color: #D2AB67;
+    margin-top: 16px !important;
+}
+.input-group-prepend>button:hover{
+    background-color: #D2AB67 !important;
+    color: white !important;
+}
+.works {
+    margin: auto !important;
+}
+
+.works>p {
+    font-family: 'Azarmehr1';
+    color: olivedrab;
+    margin-top: 25px;
+    font-size: 0.85rem !important;
+    margin-left: 17px;
+}
+
+.completed {
+    padding: 4px 11px;
+    background-color: lightgreen !important;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.not-completed {
+    padding: 4px 11px;
+    background-color: lightsalmon !important;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.fa-check {
+    color: rgb(56, 119, 56) !important;
+}
+
+.fa-remove {
+    color: rgb(182, 76, 76) !important;
+}
+.anything{
+    display: flex;
+    margin-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    ;
+    justify-content: center;
+    width: 22% !important;
+    margin-right: 38% !important;
+    padding: 10px;
+    border-radius: 50px;
+    white-space: nowrap !important;
+}
+.anything>h4{
+    direction: rtl;
+    font-family: 'Azarmehr1';
+    font-weight: bold;
+    font-size: 1rem !important;
+    white-space: nowrap !important;
+}
+@media screen and (max-width : 600px) {
+    .todo>li {
+        width: 90% !important;
+    }
+    .anything{
+        margin: auto !important;
+        width: auto !important;
+    }
+}
